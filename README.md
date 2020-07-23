@@ -138,5 +138,131 @@ Let the 5 cars be A, B, C, D, and E respectively.
 3) B & C.
 4) D & E.
 </pre>
+<hr>
+<h1>Swayamvar</h1><pre>
+<h3>Problem Description</h3>
+A ceremony where a Bride chooses her Groom from an array of eligible bachelors is called Swayamvar. But this is a Swayamvar with difference. An array of Bride-to-be will choose from an array of Groom-to-be.
+The arrangement at this Swayamvar is as follows
+· Brides-to-be are organized such that the most eligible bachelorette will get first chance to choose her Groom. Only then, the next most eligible bachelorette will get a chance to choose her Groom
+· If the initial most eligible bachelorette does not get a Groom of her choice, none of the Brides-to-be have any chance at all to get married. So unless a senior bachelorette is out of the “queue”, the junior bachelorette does not get a chance to select her Groom-to-be
+· Inital state of Grooms-to-be is such that most eligible bachelor is at the head of the “queue”. The next most eligible bachelor is next in the queue. So on and so forth.
+· Now everything hinges on the choice of the bachelorette. The most eligible bachelorette will now meet the most eligible bachelor.
+· If bachelorette selects the bachelor, both, the bachelorette and the bachelor are now Bride and Groom respectively and will no longer be a part of the Swayamvar activity. Now, the next most eligible bachelorette will get a chance to choose her Groom. Her first option is the next most eligible bachelor (relative to initial state)
+· If the most eligible bachelorette passes the most eligible bachelor, the most eligible bachelor now moves to the end of the queue. The next most eligible bachelor is now considered by the most eligible bachelorette. Selection or Passing over will have the same consequences as explained earlier.
+· If most eligible bachelorette reaches the end of bachelor queue, then the Swayamvar is over. Nobody can get married.
+· Given a mix of Selection or Passing over, different pairs will get formed.
+The selection criteria is as follows
+1. Each person either drinks rum or mojito. Bride will choose groom only if he drinks the same drink as her.
+Note : There are equal number of brides and grooms for the swayamvar.
+Tyrion as the hand of the king wants to know how many pairs will be left unmatched. Can you help Tyrion?
+<h3>Constraints</h3>
+1<= N <= 10^4
+<h3>Input Format</h3>
+First line contains one integer N, which denotes the number of brides and grooms taking part in the swayamvar. Second line contains a string in lowercase, of length N containing initial state of brides-to-be. Third line contains a string in lowercase, of length N containing initial state of grooms-to-be. Each string contains only lowercase 'r' and 'm' stating person at that index drinks "rum"(for 'r') or mojito(for 'm').
+<h3>Output</h3>
+Output a single integer denoting the number of pairs left unmatched.
+<h3>Timeout</h3>
+1
+<h3>Explanation</h3>
+<h3>Example 1</h3>
+<h3>Input</h3>
+4
+rrmm mrmr
+<h3>Output</h3>
+0
+<h3>Explanation</h3>
+The bride at first place will only marry groom who drinks rum. So the groom at first place will join the end of the queue. Updated groom's queue is "rmrm".
+Now the bride at first place will marry the groom at first place. Updated bride's queue is "rmm" and groom's queue is "mrm".
+The process continues and at last there are no pairs left. So answer is 0.
+<h3>Example 2</h3>
+<h3>Input</h3>
+4 rmrm mmmr
+<h3>Output</h3>
+2
+<h3>Explanation</h3>
+Following the above process 2 pairs will be left unmatched. Remember that bride will not move until she gets a groom of her choice.</pre>
+
+<hr>
+
+<h1>Digit Pairs</h1>
+<pre>
+<h3>Problem Description</h3>
+Given N three-digit numbers, your task is to find bit score of all N numbers and then print the number of pairs possible based on these calculated bit score.
+1. Rule for calculating bit score from three digit number:
+From the 3-digit number,
+· extract largest digit and multiply by 11 then
+· extract smallest digit multiply by 7 then
+· add both the result for getting bit pairs.
+Note: - Bit score should be of 2-digits, if above results in a 3-digit bit score, simply ignore most significant digit.
+Consider following examples:
+Say, number is 286
+Largest digit is 8 and smallest digit is 2
+So, 8*11+2*7 =102 so ignore most significant bit , So bit score = 02.
+Say, Number is 123
+Largest digit is 3 and smallest digit is 1
+So, 3*11+7*1=40, so bit score is 40.
+2. Rules for making pairs from above calculated bit scores
+Condition for making pairs are
+· Both bit scores should be in either odd position or even position to be eligible to form a pair.
+· Pairs can be only made if most significant digit are same and at most two pair can be made for a given significant digit.
+<h3>Constraints</h3>
+N<=500
+<h3>Input Format</h3>
+First line contains an integer N, denoting the count of numbers.
+Second line contains N 3-digit integers delimited by space
+<h3>Output</h3>
+One integer value denoting the number of bit pairs.
+<h3>Timeout</h3>
+1
+<h3>Explanation</h3>
+<h3>Example 1</h3>
+Input
+8 234 567 321 345 123 110 767 111
+<h3>Output</h3>
+3
+<h3>Explanation</h3>
+After getting the most and least significant digits of the numbers and applying the formula given in Rule 1 we get the bit scores of the numbers as:
+58 12 40 76 40 11 19 18
+No. of pair possible are 3:
+40 appears twice at odd-indices 3 and 5 respectively. Hence, this is one pair.
+12, 11, 18 are at even-indices. Hence, two pairs are possible from these three-bit scores.
+Hence total pairs possible is 3
+</pre>
+
+<hr>
+<h1>Dole Out Cadbury</h1>
+<pre>
+<h3>Problem Description</h3>
+You are a teacher in reputed school. During Celebration Day you were assigned a task to distribute Cadbury such that maximum children get the chocolate. You have a box full of Cadbury with different width and height. You can only distribute largest square shape Cadbury. So if you have a Cadbury of length 10 and width 5, then you need to break Cadbury in 5X5 square and distribute to first child and then remaining 5X5 to next in queue
+<h3>Constraints</h3>
+0<P<Q<1501
+<pre>0<R<S<1501 </pre>
+
+<h3>Input Format</h3>
+First line contains an integer P that denotes minimum length of Cadbury in the box
+Second line contains an integer Q that denotes maximum length of Cadbury in the box
+Third line contains an integer R that denotes minimum width of Cadbury in the box
+Fourth line contains an integer S that denotes maximum width of Cadbury in the box
+Output
+Print total number of children who will get chocolate.
+<h3>Timeout</h3>
+1
+<h3>Explanation</h3>
+<h3>Example 1</h3>
+<h3>Input</h3>
+5
+7
+3
+4
+<h3>Output</h3>
+24
+<h3>Explanation</h3>
+
+Length is in between 5 to 7 and width is in between 3 to 4.
+So we have 5X3,5X4,6X3,6X4,7X3,7X4 type of Cadbury in the box.
+If we take 5X3 :
+First, we can give 3X3 square Cadbury to 1st child .Then we are left with 3X2. Now largest square is 2X2 which will be given to next child. Next, we are left with two  1X1 part of Cadbury which will be given to another two children.
+And so on
+</pre>
 </body>
 </html>
