@@ -1,5 +1,5 @@
 <html>
-
+<pre>
 <h1>Philaland Coin</h1>
 <p>
 The problem solvers have found a new Island for coding and named it as Philaland.These smart people were given a task to make purchase of items at the Island easier by distributingvarious coins with different value.Manish has come up with a solution that if we make coins category starting from $1 till the maximum price of item present on Island, then we can purchase any item easily. He added
@@ -138,7 +138,9 @@ Let the 5 cars be A, B, C, D, and E respectively.
 3) B & C.
 4) D & E.
 </pre>
+</pre>
 <hr>
+<pre>
 <h1>Swayamvar</h1><pre>
 <h3>Problem Description</h3>
 A ceremony where a Bride chooses her Groom from an array of eligible bachelors is called Swayamvar. But this is a Swayamvar with difference. An array of Bride-to-be will choose from an array of Groom-to-be.
@@ -181,9 +183,9 @@ The process continues and at last there are no pairs left. So answer is 0.
 2
 <h3>Explanation</h3>
 Following the above process 2 pairs will be left unmatched. Remember that bride will not move until she gets a groom of her choice.</pre>
-
+</pre>
 <hr>
-
+<pre>
 <h1>Digit Pairs</h1>
 <pre>
 <h3>Problem Description</h3>
@@ -228,7 +230,7 @@ No. of pair possible are 3:
 12, 11, 18 are at even-indices. Hence, two pairs are possible from these three-bit scores.
 Hence total pairs possible is 3
 </pre>
-
+</pre>
 <hr>
 <h1>Dole Out Cadbury</h1>
 <pre>
