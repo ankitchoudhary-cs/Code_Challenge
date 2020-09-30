@@ -232,8 +232,8 @@ Hence total pairs possible is 3
 </pre>
 </pre>
 <hr>
-<h1>Dole Out Cadbury</h1>
 <pre>
+<h1>Dole Out Cadbury</h1>
 <h3>Problem Description</h3>
 You are a teacher in reputed school. During Celebration Day you were assigned a task to distribute Cadbury such that maximum children get the chocolate. You have a box full of Cadbury with different width and height. You can only distribute largest square shape Cadbury. So if you have a Cadbury of length 10 and width 5, then you need to break Cadbury in 5X5 square and distribute to first child and then remaining 5X5 to next in queue
 <h3>Constraints</h3>
