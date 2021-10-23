@@ -46,9 +46,6 @@ for i in odd_pos:
         odd_freq[i[0]] += 1
     else:
         odd_freq[i[0]] = 1
-
-
-
 pairs = 0
 for key, value in even_freq.items():
     if value <=1:
